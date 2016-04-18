@@ -678,14 +678,14 @@ ROM_START( rfmpbr2 )
 	ROM_REGION(0x4800000, "prism", 0)
 	ROM_LOAD( "rfm_u100r2.rom", 0x0000000, 0x800000, CRC(d4278a9b) SHA1(ec07b97190acb6b34b9ed6cda505ee8fefd66fec) )
 	ROM_LOAD( "rfm_u101r2.rom", 0x0800000, 0x800000, CRC(e5d4c0ed) SHA1(cfc7d9d2324cc02c9eaf53fd674f7db24736699c) )
-	ROM_LOAD( "rfm_u102.rom",   0x1000000, 0x800000, CRC(749f5c59) SHA1(2d8850e7f8ea3e07e8b444d7dd4dc4195a547ae7) )
-	ROM_LOAD( "rfm_u103.rom",   0x1800000, 0x800000, CRC(a9ec5e97) SHA1(ce7c38dcbf34ce10d6e204a3176cd2c7a83b525a) )
-	ROM_LOAD( "rfm_u104.rom",   0x2000000, 0x800000, CRC(0a1acd70) SHA1(dcca4de92eadeb82ac776953326410a9687838cb) )
-	ROM_LOAD( "rfm_u105.rom",   0x2800000, 0x800000, CRC(1ef31684) SHA1(141900a7426ad483384606cddb018d186952f439) )
-	ROM_LOAD( "rfm_u106.rom",   0x3000000, 0x800000, CRC(daf4e1dc) SHA1(0612495468fb962b833057e50f620c5f69cd5840) )
-	ROM_LOAD( "rfm_u107.rom",   0x3800000, 0x800000, CRC(e737ab39) SHA1(0e978923db19e2893fdb4aae69d6ed3c3f664a31) )
-	ROM_LOAD( "rfm_u109.bin",   0x4000000, 0x400000, CRC(a20b2abb) SHA1(0010d7dbf60b03f50cc1d314fdf786721161b064) )
-	ROM_LOAD( "rfm_u110.bin",   0x4400000, 0x400000, CRC(095abec9) SHA1(87ce156bbf673ebd50bbd7dcca4c6924d24fc823) )
+
+	ROM_REGION(0x08100, "gfx1", 0)
+	ROM_LOAD("cga.chr",     0x00000, 0x01000, CRC(42009069) SHA1(ed08559ce2d7f97f68b9f540bddad5b6295294dd))
+ROM_END
+
+ROM_START( stockp2k )
+	ROM_REGION32_LE(0x40000, "bios", 0)
+	ROM_LOAD( "awdbios.bin",  0x000000, 0x040000, CRC(854ce8c6) SHA1(7826de74026e052dacce8516382f664004c327ad) )
 
 	ROM_REGION(0x08100, "gfx1", 0)
 	ROM_LOAD("cga.chr",     0x00000, 0x01000, CRC(42009069) SHA1(ed08559ce2d7f97f68b9f540bddad5b6295294dd))
@@ -696,3 +696,4 @@ ROM_END
 GAME( 1999, swe1pb,   0       , mediagx, mediagx, pinball2k_state, pinball2k, ROT0,   "Midway",  "Pinball 2000: Star Wars Episode 1", MACHINE_NOT_WORKING | MACHINE_NO_SOUND | MACHINE_MECHANICAL )
 GAME( 1999, rfmpb,    0       , mediagx, mediagx, pinball2k_state, pinball2k, ROT0,   "Midway",  "Pinball 2000: Revenge From Mars (rev. 1)", MACHINE_NOT_WORKING | MACHINE_NO_SOUND | MACHINE_MECHANICAL )
 GAME( 1999, rfmpbr2,  rfmpb   , mediagx, mediagx, pinball2k_state, pinball2k, ROT0,   "Midway",  "Pinball 2000: Revenge From Mars (rev. 2)", MACHINE_NOT_WORKING | MACHINE_NO_SOUND | MACHINE_MECHANICAL )
+GAME( 2016, stockp2k, 0       , mediagx, mediagx, pinball2k_state, pinball2k, ROT0,   "Midway",  "Pinball 2000: Stock PC", MACHINE_NOT_WORKING | MACHINE_NO_SOUND )

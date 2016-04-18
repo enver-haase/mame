@@ -29834,6 +29834,7 @@ pimps                           //
 rfmpb                           //
 rfmpbr2                         //
 swe1pb                          //
+stockp2k                        // Stock Pinball2000 PC, should boot its HDD if available (usually not there).
 
 @source:pingpong.cpp
 cashquiz                        // (c) 1986 Zilec-Zenitone
